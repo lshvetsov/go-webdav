@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<D:multistatus xmlns:D="DAV:" xmlns:caldav="urn:ietf:params:xml:ns:caldav">
+ <D:response>
+  <D:href>/caldav/v2/test%40gmail.com/events/test-event-google-123%40example.com.ics</D:href>
+  <D:propstat>
+   <D:status>HTTP/1.1 200 OK</D:status>
+   <D:prop>
+    <D:getetag>"63896717430"</D:getetag>
+   </D:prop>
+  </D:propstat>
+ </D:response>
+ <D:sync-token>/caldav/v2/test@gmail.com/events/sync/ChoIj9SHyrCjkQMQj9SHyrCjkQMYBSDS</D:sync-token>
+</D:multistatus>
+
+

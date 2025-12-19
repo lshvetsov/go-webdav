@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<D:multistatus xmlns:D="DAV:" xmlns:caldav="urn:ietf:params:xml:ns:caldav" 
+               xmlns:cs="http://calendarserver.org/ns/" xmlns:ical="http://apple.com/ns/ical/">
+ <D:response>
+  <D:href>/caldav/v2/test%40gmail.com/</D:href>
+  <D:propstat>
+   <D:status>HTTP/1.1 200 OK</D:status>
+   <D:prop>
+    <D:resourcetype><D:collection/></D:resourcetype>
+   </D:prop>
+  </D:propstat>
+ </D:response>
+ <D:response>
+  <D:href>/caldav/v2/test%40gmail.com/events/</D:href>
+  <D:propstat>
+   <D:status>HTTP/1.1 200 OK</D:status>
+   <D:prop>
+    <D:resourcetype><D:collection/><caldav:calendar/></D:resourcetype>
+    <D:displayname>test@gmail.com</D:displayname>
+    <D:getetag>"p33sdinp60e2g4o0"</D:getetag>
+    <caldav:calendar-description/>
+    <caldav:supported-calendar-component-set>
+     <caldav:comp name="VEVENT"/>
+    </caldav:supported-calendar-component-set>
+    <cs:getctag>p33sdinp60e2g4o0</cs:getctag>
+   </D:prop>
+  </D:propstat>
+ </D:response>
+</D:multistatus>
+
+

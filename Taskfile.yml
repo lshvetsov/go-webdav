@@ -1,0 +1,77 @@
+version: '3'
+
+tasks:
+  default:
+    desc: "Show available tasks"
+    cmds:
+      - task --list
+
+  lint:
+    desc: "Run static analysis"
+    cmds:
+      - go vet ./...
+      - go mod tidy -v
+
+  test:
+    desc: "Run unit tests"
+    cmds:
+      - go test -v -short ./...
+
+  integration:
+    desc: "Run integration tests with mock server"
+    cmds:
+      - go test -v -run "Test.*" ./caldav/ -count=1
+
+  coverage:
+    desc: "Run tests with coverage report"
+    cmds:
+      - go test -v -coverprofile=coverage.out ./...
+      - go tool cover -html=coverage.out -o coverage.html
+
+  build:
+    desc: "Build all packages"
+    cmds:
+      - go build ./...
+
+  all:
+    desc: "Run lint, build, and all tests"
+    cmds:
+      - task: lint
+      - task: build
+      - task: test
+      - task: integration
+
+  manual-test:
+    desc: "Run manual tests with real CalDAV providers (requires .env)"
+    cmds:
+      - |
+        if [ ! -f .env ]; then
+          echo "❌ Error: .env file not found"
+          echo "📝 Copy env.example to .env and fill in your credentials"
+          exit 1
+        fi
+        source .env && go run cmd/caldav-test/main.go {{.CLI_ARGS}}
+
+  manual-test-google:
+    desc: "Test Google Calendar only (requires GOOGLE_ACCESS_TOKEN, GOOGLE_EMAIL)"
+    cmds:
+      - task: manual-test
+        vars: {CLI_ARGS: "google"}
+
+  manual-test-yandex:
+    desc: "Test Yandex Calendar only (requires YANDEX_USERNAME, YANDEX_PASSWORD)"
+    cmds:
+      - task: manual-test
+        vars: {CLI_ARGS: "yandex"}
+
+  manual-test-apple:
+    desc: "Test Apple iCloud only (requires APPLE_USERNAME, APPLE_PASSWORD)"
+    cmds:
+      - task: manual-test
+        vars: {CLI_ARGS: "apple"}
+
+  manual-test-mail:
+    desc: "Test Mail.ru Calendar only (requires MAIL_USERNAME, MAIL_PASSWORD)"
+    cmds:
+      - task: manual-test
+        vars: {CLI_ARGS: "mail"}

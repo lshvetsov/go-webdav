@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<D:multistatus xmlns:D="DAV:" xmlns:caldav="urn:ietf:params:xml:ns:caldav">
+ <D:response>
+  <D:href>/caldav/v2/test%40gmail.com/events/test-event-google-123%40example.com.ics</D:href>
+  <D:propstat>
+   <D:status>HTTP/1.1 200 OK</D:status>
+   <D:prop>
+    <D:getetag>"63896717430"</D:getetag>
+    <caldav:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+DTSTART:20250115T100000Z
+DTEND:20250115T110000Z
+DTSTAMP:20251021T081030Z
+UID:test-event-google-123@example.com
+SUMMARY:Test Event Google CalDAV
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
+</caldav:calendar-data>
+   </D:prop>
+  </D:propstat>
+ </D:response>
+ <D:response>
+  <D:href>/caldav/v2/test%40gmail.com/events/test-event-google-456%40example.com.ics</D:href>
+  <D:propstat>
+   <D:status>HTTP/1.1 200 OK</D:status>
+   <D:prop>
+    <D:getetag>"63896717431"</D:getetag>
+    <caldav:calendar-data>BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+DTSTART:20250116T140000Z
+DTEND:20250116T150000Z
+DTSTAMP:20251021T081030Z
+UID:test-event-google-456@example.com
+SUMMARY:Second Test Event Google
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
+</caldav:calendar-data>
+   </D:prop>
+  </D:propstat>
+ </D:response>
+</D:multistatus>
+
+

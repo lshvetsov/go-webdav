@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<D:multistatus xmlns:D="DAV:">
+ <D:response>
+  <href xmlns="DAV:">/calendars/test%40yandex.ru/events-35014595/event-uid%40yandex.ru.ics</href>
+  <D:propstat>
+   <D:prop>
+    <D:getetag>1764836851523</D:getetag>
+    <calendar-data xmlns="urn:ietf:params:xml:ns:caldav">BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Yandex LLC//Yandex Calendar//EN
+BEGIN:VEVENT
+UID:event-uid@yandex.ru
+DTSTART:20250110T100000Z
+DTEND:20250110T110000Z
+SUMMARY:Yandex Test Event
+END:VEVENT
+END:VCALENDAR
+</calendar-data>
+   </D:prop>
+   <status xmlns="DAV:">HTTP/1.1 200 OK</status>
+  </D:propstat>
+ </D:response>
+ <D:sync-token>sync-token:1 1764837252000</D:sync-token>
+</D:multistatus>

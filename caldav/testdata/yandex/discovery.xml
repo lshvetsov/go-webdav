@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<D:multistatus xmlns:D="DAV:">
+ <D:response>
+  <href xmlns="DAV:">/calendars/test%40yandex.ru/</href>
+  <D:propstat>
+   <D:prop>
+    <D:resourcetype><D:collection/></D:resourcetype>
+    <D:displayname>Calendars</D:displayname>
+   </D:prop>
+   <status xmlns="DAV:">HTTP/1.1 200 OK</status>
+  </D:propstat>
+ </D:response>
+ <D:response>
+  <href xmlns="DAV:">/calendars/test%40yandex.ru/events-35014595/</href>
+  <D:propstat>
+   <D:prop>
+    <D:resourcetype>
+     <D:collection/>
+     <calendar xmlns="urn:ietf:params:xml:ns:caldav"/>
+    </D:resourcetype>
+    <D:displayname>Мои события</D:displayname>
+    <D:getetag>1764837252000</D:getetag>
+    <calendar-description xmlns="urn:ietf:params:xml:ns:caldav"/>
+    <supported-calendar-component-set xmlns="urn:ietf:params:xml:ns:caldav">
+     <comp xmlns="urn:ietf:params:xml:ns:caldav" name="VEVENT"/>
+    </supported-calendar-component-set>
+    <getctag xmlns="http://calendarserver.org/ns/">1764837252000</getctag>
+   </D:prop>
+   <status xmlns="DAV:">HTTP/1.1 200 OK</status>
+  </D:propstat>
+ </D:response>
+</D:multistatus>

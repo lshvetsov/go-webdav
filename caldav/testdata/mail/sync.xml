@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<D:multistatus xmlns:D="DAV:">
+ <D:response>
+  <D:href>/principals/mail.ru/test/calendars/78ad2c65-8122-4ebb-be3d-7bcedaa45520/bcde3c79-0b14-4003-afb7-475a583e6dc2@calendar.sdisk.ru.ics</D:href>
+  <D:propstat>
+   <D:prop>
+    <D:getetag>1de8e31ac2c555bcbafddd3b7f3c71da0b0208f4</D:getetag>
+    <C:calendar-data xmlns:C="urn:ietf:params:xml:ns:caldav">BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Mail.ru//Calendar//EN
+BEGIN:VEVENT
+UID:bcde3c79-0b14-4003-afb7-475a583e6dc2@calendar.sdisk.ru
+DTSTART:20250110T100000Z
+DTEND:20250110T110000Z
+SUMMARY:Mail.ru Test Event
+END:VEVENT
+END:VCALENDAR
+</C:calendar-data>
+   </D:prop>
+   <D:status>HTTP/1.0 200 OK</D:status>
+  </D:propstat>
+ </D:response>
+</D:multistatus>

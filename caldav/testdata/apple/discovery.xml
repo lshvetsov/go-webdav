@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<multistatus xmlns="DAV:">
+ <response>
+  <href>/22520712630/calendars/</href>
+  <propstat>
+   <prop>
+    <resourcetype><collection/></resourcetype>
+    <displayname>calendars</displayname>
+   </prop>
+   <status>HTTP/1.1 200 OK</status>
+  </propstat>
+ </response>
+ <response>
+  <href>/22520712630/calendars/337F6613-8F56-4766-A0AD-70529139ACCE/</href>
+  <propstat>
+   <prop>
+    <resourcetype>
+     <collection/>
+     <calendar xmlns="urn:ietf:params:xml:ns:caldav"/>
+    </resourcetype>
+    <displayname>Календарь</displayname>
+    <getetag>"mhuegzpo"</getetag>
+    <calendar-description xmlns="urn:ietf:params:xml:ns:caldav"/>
+    <supported-calendar-component-set xmlns="urn:ietf:params:xml:ns:caldav">
+     <comp name="VEVENT"/>
+    </supported-calendar-component-set>
+    <getctag xmlns="http://calendarserver.org/ns/">HwoQEgwAAJq/X3ZE8wAAAAAYARgA</getctag>
+   </prop>
+   <status>HTTP/1.1 200 OK</status>
+  </propstat>
+ </response>
+</multistatus>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<multistatus xmlns="DAV:">
+ <response>
+  <href>/22520712630/calendars/337F6613-8F56-4766-A0AD-70529139ACCE/test-event-apple-123.ics</href>
+  <propstat>
+   <prop>
+    <getetag xmlns="DAV:">"mh8tp3al"</getetag>
+    <calendar-data xmlns="urn:ietf:params:xml:ns:caldav"><![CDATA[BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Test//Test Event//EN
+BEGIN:VEVENT
+UID:test-event-apple-123@example.com
+DTSTART:20250115T100000Z
+DTEND:20250115T110000Z
+SUMMARY:Test Event Apple CalDAV
+END:VEVENT
+END:VCALENDAR
+]]></calendar-data>
+   </prop>
+   <status>HTTP/1.1 200 OK</status>
+  </propstat>
+ </response>
+</multistatus>
